@@ -1,0 +1,60 @@
+@media only screen and (min-width : 320px) {
+  .extra-logo{
+    display: none;
+  }
+  .header {
+    padding-top: 20px;
+  }
+  .logo_h{
+    line-height: normal;
+    font-size: 28px;
+    margin-top: 60px;
+    margin-bottom: 10px
+  }
+  .logo {
+    height: auto;
+  }
+  .logo_tagline{
+    font-size: 15px;
+    padding: 0 0 0 0
+  }
+  .social-nets-wrapper .social li a {
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+  }
+}
+
+@media only screen and (min-width : 480px) {
+
+}
+
+@media only screen and (min-width : 768px) {
+
+}
+
+@media only screen and (min-width : 992px) {
+  .extra-logo{
+    display: block;
+  }
+  .header {
+    padding-top: 43px;
+  }
+  .logo_h{
+    line-height: 20px;
+    font-size: 85px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 16px 0 0 0
+  }
+  .logo {
+    height: 128px;
+  }
+  .logo_tagline{
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width : 1200px) {
+
+}

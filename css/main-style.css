@@ -2019,37 +2019,37 @@ input[type="file"] {
 }
 
 #back-top {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 #back-top-wrapper {
     right: 15px;
-    bottom: 112px;
+    bottom: 112px
 }
 
 #back-top a {
-    width: auto;
+    width: auto
 }
 
 #back-top a:hover {
-    color: #3a3a3a;
+    color: #3a3a3a
 }
 
 #back-top a:hover span {
-    background-color: transparent;
+    background-color: transparent
 }
 
 #back-top span {
-    background: none;
+    background: 0 0;
     width: auto;
-    height: auto;
+    height: auto
 }
 
 #back-top span:before {
     content: '\f0aa';
     font-size: 42px;
     font-family: FontAwesome;
-    line-height: 1.2em;
+    line-height: 1.2em
 }
 
 .zoom-icon {
@@ -2297,7 +2297,7 @@ a.thumbnail:hover .zoom-icon:before,
 
 @media (max-width: 480px) {
     .skills_wrapper .skills-item {
-        width: 270px;
+        width: 100%;
     }
 }
 

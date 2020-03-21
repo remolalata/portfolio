@@ -340,29 +340,30 @@
                                             <div class="portfolio_isotope_wrapper">
                                                 <ul class="portfolio_filters">
                                                     <li class="active"><a href="#" data-filter="*">all</a></li>
-                                                    <li><a href="#" data-filter=".a">wordpress</a></li>
-                                                    <li><a href="#" data-filter=".b">joomla</a></li>
-                                                    <li><a href="#" data-filter=".c">photoshop</a></li>
-                                                    <li><a href="#" data-filter=".d">html</a></li>
+                                                    <li><a href="#" data-filter='.htmlcss'>HTML / CSS</a></li>
+                                                    <li><a href='#' data-filter='.javascript'>Javascript</a></li>
+                                                    <li><a href="#" data-filter=".reactjs">ReactJS</a></li>
+                                                    <li><a href="#" data-filter=".phpmysql">PHP / MySQL</a></li>
+                                                    <li><a href="#" data-filter=".qubit">Qubit</a></li>
                                                 </ul>
 
                                                 <div class="portfolio_list">
-                                                    <div class="portfolio_item" data-category="a">
+                                                    <div class="portfolio_item phpmysql javascript">
                                                         <img src="images/avp.png" />
                                                     </div>
-                                                    <div class="portfolio_item" data-category="b">
+                                                    <div class="portfolio_item phpmysql javascript">
                                                         <img src="images/limgas.png" />
                                                     </div>
-                                                    <div class="portfolio_item" data-category="c">
+                                                    <div class="portfolio_item htmlcss phpmysql javascript">
                                                         <img src="images/manaoagmunicipality.png" />
                                                     </div>
-                                                    <div class="portfolio_item" data-category="d">
+                                                    <div class="portfolio_item htmlcss javascript">
                                                         <img src="images/s36asia.png" />
                                                     </div>
-                                                    <div class="portfolio_item" data-category="a">
+                                                    <div class="portfolio_item htmlcss javascript">
                                                         <img src="images/sa36.png" />
                                                     </div>
-                                                    <div class="portfolio_item" data-category="b">
+                                                    <div class="portfolio_item htmlcss javascript">
                                                         <img src="images/tiwin.png" />
                                                     </div>
                                                 </div>
@@ -499,24 +500,11 @@
                 itemSelector: '.portfolio_item',
                 layoutMode: 'fitRows'
             });
-            // filter functions
-            var filterFns = {
-                // show if number is greater than 50
-                numberGreaterThan50: function() {
-                    var number = $(this).find('.number').text();
-                    return parseInt(number, 10) > 50;
-                },
-                // show if name ends with -ium
-                ium: function() {
-                    var name = $(this).find('.name').text();
-                    return name.match(/ium$/);
-                }
-            };
+
             // bind filter button click
             $('.portfolio_filters').on('click', 'a', function(e) {
                 e.preventDefault();
                 var filterValue = $(this).attr('data-filter');
-                filterValue = filterFns[filterValue] || filterValue;
                 $grid.isotope({
                     filter: filterValue
                 });
@@ -525,9 +513,8 @@
             $('.portfolio_filters li').each(function(i, buttonGroup) {
                 var $buttonGroup = $(buttonGroup);
                 $buttonGroup.on('click', function() {
-                    alert('hahah')
-                    $buttonGroup.find('.is-checked').removeClass('is-checked');
-                    $(this).addClass('is-checked');
+                    $('.portfolio_filters li.active').removeClass('active');
+                    $(this).addClass('active');
                 });
             });
 
